@@ -13,11 +13,8 @@ LangChain Medical Patient Summary is an innovative project leveraging the power 
 The project requires Python 3.7 or higher and the following Python libraries:
 
 - langchain (version that includes OpenAI GPT-4 model)
-- Chroma
-
-Please make sure you have all the required Python packages installed. You can install these packages using pip:
-
-`pip install -r requirements.txt`
+- chroma
+- openai
 
 Quick Start Guide
 
