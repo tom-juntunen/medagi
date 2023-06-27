@@ -1,22 +1,23 @@
-LangChain Medical Patient Summary
+#### LangChain Medical Patient Summary
 
-This project reads a patient's FHIR-formatted JSON record, extracts relevant information, and uses OpenAI's language model to create a summary of the patient's information. The summary is then sent as a message over a Pusher channel.
+LangChain Medical Patient Summary is an innovative project leveraging the power of Natural Language Processing (NLP) and OpenAI's GPT-4 language model. It's designed to retrieve and summarize medical patient information from JSON formatted patient files, conforming to FHIR (Fast Healthcare Interoperability Resources) protocol.
 
-How it works
+##### How it works
 
-The project first reads a FHIR-formatted JSON file that contains a patient's medical record. The text from this file is split into chunks of 1000 characters each. The Chroma class, powered by OpenAI embeddings, is used to convert these text chunks into vectors. A question-answering chain is loaded using the OpenAI language model. A query is then made to this chain to generate a summary of the patient's information. The output of this query is a summary text. This summary is then sent as a message over a Pusher channel named 'General' with the event name 'new-message'. The message is received on the same channel using the pusherclient library.
+1. The program reads patient data from a JSON file, then splits this data into manageable chunks.
+2. It uses OpenAI embeddings to understand and analyze the text, forming the basis for question-answering.
+3. Chroma, a text retriever, extracts relevant patient data from these embeddings, and limits token count to manage computational load.
+4. This relevant data is then passed to a question-answering chain which uses OpenAI's GPT-4 language model, to provide interactive and informative responses to open-ended medical questions.
 
-Requirements
+##### Requirements
+The project requires Python 3.7 or higher and the following Python libraries:
 
-- Python 3.x
-- pusher
-- pusherclient
-- langchain
-- openai
+- langchain (version that includes OpenAI GPT-4 model)
+- Chroma
 
 Please make sure you have all the required Python packages installed. You can install these packages using pip:
 
-pip install pusher pusherclient langchain openai
+`pip install -r requirements.txt`
 
 Quick Start Guide
 
@@ -24,7 +25,7 @@ Quick Start Guide
 `https://github.com/tom-juntunen/medagi.git`
 
 2. Navigate to the project directory:
-`cd langchain-medical-patient-summary`
+`cd medagi`
 
 3. Install the required Python packages:
 `pip install -r requirements.txt`
