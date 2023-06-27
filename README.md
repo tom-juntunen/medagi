@@ -58,5 +58,7 @@ Follow the instructions provided by OpenAI to generate an API access token.
 Take note of the generated API access token, as you will need it to authenticate your API requests.
 Once you have obtained your OpenAI API access token, you can proceed with the code update. 
 
+### Proof of Concept Example
+
 <img width="818" alt="Screenshot 2023-06-26 at 11 41 41 PM" src="https://github.com/tom-juntunen/medagi/assets/43662466/c9850e95-b03f-41aa-a05d-5dfdc82a28e7">
 
